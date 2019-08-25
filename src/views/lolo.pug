@@ -3,3 +3,8 @@ include ../blocks/includes/template.pug
 append content
   p ere
   p dsdfsf
+
+
+  - let infoBox = ["Заглавный текст", "text1", "text2", "text3"]
+
+  +block(...infoBox)

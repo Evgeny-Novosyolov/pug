@@ -13,14 +13,14 @@ nav.navbar
 
 
 
-mixin block(title, text1)
+mixin block(title, ...text1)
   .block__wrapper
     .box
       h1 #{title}
       .box__main
       ul.box__list
-      each itemText in text1 
-        li.box__item #{itemText}
+        each itemText in text1 
+          li.box__item #{itemText}
          
      
         
