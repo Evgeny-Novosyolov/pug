@@ -23,4 +23,17 @@ mixin block(title, ...text1)
           li.box__item #{itemText}
          
      
-        
+
+
+block blockWrapper
+  .block__wrapper2
+
+
+mixin boxItem(title, ...text)
+  .box
+    h1 #{title}
+    ul.box__list
+      each itemText in text
+        li.box__item #{itemText}   
+
+

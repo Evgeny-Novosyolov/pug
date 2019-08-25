@@ -6,5 +6,23 @@ append content
 
 
   - let infoBox = ["Заглавный текст", "text1", "text2", "text3"]
+  - let infoBox2 = ["Заглавный текст2", "text12", "text23", "text33"]
+
+
+  - let BLOCKINFO = [infoBox, infoBox2]
 
 +block(...infoBox)
+ 
+
+block blockWrapper 
+  +boxItem(...infoBox2)
+  +boxItem(...infoBox)
+
+
+//- +boxItem(...BLOCKINFO)
+
+
+
+  
+
+   
