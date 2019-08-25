@@ -7,10 +7,6 @@ append content
 
   - let infoBox = ["Заглавный текст", "text1", "text2", "text3"]
   - let infoBox2 = ["Заглавный текст2", "text12", "text23", "text33"]
-
-
-  - let BLOCKINFO = [infoBox, infoBox2]
-
 +block(...infoBox)
  
 
@@ -18,11 +14,25 @@ block blockWrapper
   +boxItem(...infoBox2)
   +boxItem(...infoBox)
 
+________________________________________________________________________
+  -let text1 = ["text1", "text2", "text3"]
 
-//- +boxItem(...BLOCKINFO)
+
+  - let infoBox11 = [{"title":"Заглавный текст11", "text": ["text111", "text1112", "text113"]}]
+  - let infoBox22 = [{"title":"Заглавный текст22", "text": ["text211", "text2222", "text223"]}]
+  - let BLOCKINFO = [infoBox11, infoBox22]
 
 
 
-  
 
-   
+ 
+block blockWrapper 
+  +boxItem2(...infoBox11)
+________________________________________________________________________
+
++boxItem3(...BLOCKINFO)  
+
+
+hr
+for movie in movieList
+  +movie-card(movie)

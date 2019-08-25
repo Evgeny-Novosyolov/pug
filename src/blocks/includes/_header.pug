@@ -37,3 +37,43 @@ mixin boxItem(title, ...text)
         li.box__item #{itemText}   
 
 
+
+
+mixin boxItem2(event)
+  .box
+    h1 #{event.title}
+    ul.box__list
+      each itemText in event.text
+        li.box__item #{itemText}   
+
+
+
+mixin boxItem3(event)
+  each eventItem in event
+    .box
+      h1 #{eventItem.title}
+      ul.box__list
+      each itemText in eventItem.text
+        li.box__item #{itemText}   
+      
+
+
+mixin movie-card(movie)
+  div.movie-card
+    a(href=movie.imdbURL)
+      h2.movie-title= movie.title
+    img.movie-poster(src=movie.posterImage)
+    h3 Cast
+    ul.cast
+      each actor in movie.cast
+        li= actor
+    div.rating
+      if movie.rating > 5
+        img(src="img/thumbs-up")
+      else
+        img(src="img/thumbs-down")
+    ul.genre
+      each genre in movie.genres
+        li= genre
+
+
