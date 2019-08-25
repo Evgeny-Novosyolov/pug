@@ -1,0 +1,47 @@
+extends ../blocks/includes/template.pug
+
+
+append config 
+  - myTitle = "Cвяжитесь с нами"
+  - myDesc = "ololo" 
+  - GoogleFonts += "|PT+Sans"
+  - var currentURL = "contact.html"
+
+append links
+  style.
+    h1 {
+      color: red;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+  
+append content
+  p.
+  lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi tempora recusandae nemo neque a accusantium eum hic voluptatibus illum sint.
+  div#carouselExampleControls.carousel.slide(data-ride="carousel")
+    div.carousel-inner
+      +slide("https://placeimg.com/640/480/arch?t=1566661356515", "active")
+      +slide("https://placeimg.com/640/480/arch?t=1566661356513", "")
+      +slide("https://placeimg.com/640/480/arch?t=1566661356523", "")
+    a.carousel-control-prev(href="#carouselExampleControls" role="button" data-slide="prev")
+      span.carousel-control-prev-icon(aria-hidden="true")
+      span.sr-only Previous
+    a.carousel-control-next(href="#carouselExampleControls" role="button" data-slide="next")
+      span.carousel-control-next-icon(aria-hidden="true")
+      span.sr-only Next
+
+  p text text
+
+
+append scripts
+  script.
+    let btn = document.querySelector(".btn-primary")
+    console.log(1)
+    
+    btn.onclick = function(){
+      btn.style.background = "transparent"
+    }

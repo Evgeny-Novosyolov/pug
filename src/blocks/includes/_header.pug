@@ -1,0 +1,26 @@
+- let navList= ["Главная", "Блог", "Портфолио", "Контакты"]
+- let aLink = ["google.ru", "1213", "3333", "43242"]
+
+mixin menu(menu_items)
+  ul(class="menu__list")
+  each item in menu_items
+    li.menu__item: a.menu-link(href=item.href class={active: currentURL ===  item.href}) #{item.title}
+
+
+nav.navbar
+  +menu([{'title': 'Главная', 'href' : 'index.html'}, {'title': 'Блог', 'href' : 'blog.html'},{'title': 'Портфолио', 'href' : 'olol.html'},{'title': 'Контакты', 'href' : 'contact.html'}, ])
+
+
+
+
+mixin block(title, text1)
+  .block__wrapper
+    .box
+      h1 #{title}
+      .box__main
+      ul.box__list
+      each itemText in text1 
+        li.box__item #{itemText}
+         
+     
+        

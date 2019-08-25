@@ -1,0 +1,28 @@
+@mixin btn-size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin widthBox($n, $width, $off) {
+  $val: 100 /12 *$n;
+
+  @media screen and (max-width: $width) {
+    width: calc((#{$val} * 1%) - #{$off}*2);
+    @content;
+  }
+}
+@mixin WidthBlock($marg) {
+  margin-left: calc(#{$marg} *(-1));
+    margin-right: calc(#{$marg} *(-1));
+}
+
+@mixin marginBox ($numT, $numB) {
+  margin-top: $margin-primary-top - $numT;
+  margin-bottom: $margin-primary-bottom - $numB;
+}

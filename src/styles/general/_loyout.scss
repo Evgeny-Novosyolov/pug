@@ -1,0 +1,362 @@
+.wrapper-flex {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-left: var(--offset);
+  padding-right: var(--offset);
+
+}
+
+
+
+.header {
+  background: linear-gradient(to right, rgba(var(--color-primary-bg), 1) 20%, rgba(var(--color-secondary-bg), 1) 40%, rgba(var(--color-secondary-bg), 1) 100%);
+  height: 140vh;
+  @media (max-width:900px){
+    height: auto;
+  }
+  &__wrapper {
+    padding-bottom: calc(var(--margin-primary-bottom)*0.3)
+  }
+  &--top {
+    height: calc(var(--offset)*10);
+    padding-top: 1rem;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 900px) {
+      margin: 0 -1.5rem;
+      border-bottom: 0.1rem solid rgba(var(--color-primary-text), 0.5);
+      height: auto;
+
+      .header::after {
+        width: 50%;
+      }
+
+    }
+  }
+
+  &--center {
+    padding: 12vh 0 13vh;
+  }
+
+  &-wrapper__button {
+    margin-top: 8vh;
+    flex-wrap: wrap;
+  }
+
+  .block-offers {
+    display: flex;
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+
+    label {
+      width: calc(100% / 3);
+
+      @media screen and (max-width: 900px) {
+        margin: var(--offset);
+        width: calc(100% - #{var(--offset)}*2);
+
+      }
+    }
+  }
+
+  .box {
+    cursor: pointer;
+    padding: 6rem 4rem 4rem 4rem;
+
+  }
+
+}
+
+.logo {
+  width: 22rem;
+  font-size: var(--size-logo-text);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3.3px;
+  display: block;
+  //margin-right: auto;
+}
+
+.history {
+  &__wrapper {
+    background: var(--accept-color-primary-text);
+    margin-top: calc(var(--margin-primary-top) * (-1));
+    margin-bottom: var(--margin-primary-bottom);
+    padding-top: calc(var(--margin-primary-top) *1.3); //*2
+    transform: skewY(5deg);
+
+    &>* {
+      transform: skewY(-5deg);
+    }
+
+    position: relative;
+    z-index: 20;
+  }
+
+  &__title {
+    padding: 0 30%;
+
+    @media(max-width: 1200px) {
+      padding: 0 10%;
+    }
+
+    @media(max-width: 900px) {
+      padding: 0 var(--offset);
+    }
+
+    margin: {
+      top: 0;
+      left: auto;
+      right: auto;
+    }
+  }
+
+  &__text {
+    padding: 0 20%;
+    margin: 0 auto 5rem;
+
+    @media(max-width: 1200px) {
+      padding: 0 5%;
+    }
+
+    @media(max-width: 900px) {
+      padding: 0 var(--offset);
+    }
+  }
+
+}
+
+.comment {
+  &__wrapper {
+    padding-top: var(--margin-primary-top);
+    padding-bottom: calc(var(--offset)*6);
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    animation: Gradient 30s linear infinite alternate;
+    padding-left:18.47%;
+    padding-right: 18.47%;
+    @media (max-width: 1500px) {
+      padding-left:  10%;
+      padding-right: 10%;
+    }
+    @media (max-width: 900px) {
+      padding-left: var(--offset);
+      padding-right: var(--offset);
+    }
+  }
+
+  &__block {
+    padding-left:  10%;
+    padding-right: 10%;
+  }
+
+  &__box {
+    min-width: 100%;
+  }
+
+  &__author {
+    margin-top: 2rem;
+  }
+
+  &-wrapper__button {
+    margin-top: calc(var(--offset)*4);
+
+  }
+}
+
+.project,
+.stats,
+.news {
+  &__wrapper {
+    box-sizing: border-box;
+
+    padding: {
+      top: var(--margin-primary-top);
+      bottom: var(--margin-primary-bottom);
+    }
+  }
+
+  &__subtitle {}
+
+  &__title {
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.project {
+  &__header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__block {
+    box-sizing: content-box;
+    @include WidthBlock(var(--offset));
+  }
+
+  &__box {
+    margin: 5.5rem 1.5rem 0;
+    @include widthBox(4, 1920px, var(--offset));
+    @include widthBox(5, 900px, var(--offset));
+    @include widthBox(10, 720px, var(--offset));
+  }
+
+  &-wrapper__img {
+    width: 100%;
+    padding-top: 63%;
+  }
+
+  &__text--strong {
+    margin-top: var(--offset);
+  }
+
+}
+
+
+
+
+.stats {
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include WidthBlock(var(--offset));
+   
+  }
+  &__box {
+    @include widthBox(6, 1920px, var(--offset));
+    @include widthBox(8, 1110px, var(--offset));
+  }
+
+  &__list {
+    @include flex-center;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 14.3%; //8rem
+    }
+  }
+
+  &__list {
+    margin-top: 4rem;
+  }
+}
+
+
+
+
+.news {
+  &__wrapper {
+    padding-bottom: calc(var(--margin-primary-bottom)*0.5);
+
+  }
+
+  &__box {
+    margin: calc(var(--offset)*2.6) var(--offset) 0;
+  }
+
+  &__block {
+    @include flex-center;
+    align-items: stretch;
+    @include WidthBlock(var(--offset));
+    flex-wrap: wrap;
+  }
+
+  &__box {
+    @include widthBox(4, 1920px, var(--offset));
+    @include widthBox(10, 720px, var(--offset));
+  }
+
+  &-wrapper__main {
+    margin-top: calc(var(--margin-primary-top)*0.28);
+  }
+
+  &__text {
+    margin-top: calc(var(--margin-primary-top)*0.07);
+  }
+
+  &__button {
+    margin-top: calc(var(--margin-primary-top)*0.14);
+  }
+}
+
+.footer {
+  padding-top: calc(var(--margin-primary-top) * 1.87); //*1.87
+  background: linear-gradient(to right, rgba(var(--color-primary-bg), 1) 20%, rgba(var(--color-secondary-bg), 1) 50%, rgba(var(--color-secondary-bg), 1) 100%);
+  clip-path: polygon(0% 100%, 100% 100%, 100% 21%, 0% 0%);
+
+  &__header {
+    margin-bottom: calc(var(--margin-primary-bottom)*0.25);
+  }
+
+  &__block {
+    @include flex-center;
+    align-items: stretch;
+    @include WidthBlock(var(--offset));
+    flex-wrap: wrap;
+  }
+
+  &__box {
+    margin: 2rem 1.5rem 0;
+    @include widthBox(3, 1920px, var(--offset));
+    @include widthBox(6, 720px, var(--offset));
+    
+  }
+
+  &__item {
+    padding: 1rem 0;
+  }
+
+  &__post {
+    li:last-child {
+      border-top: 0.1rem solid var(--accept-color-primary-text);
+    }
+
+    .post__date {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__link {
+    li {
+      cursor: pointer;
+      padding: 0.7rem;
+      padding-left: var(--offset);
+    }
+  }
+
+  &__twitter {
+    .twitter__link {
+      padding: calc(var(--offset)*2) 0; //*2
+
+    }
+
+    li:last-child {
+      border-top: 0.1rem solid var(--accept-color-primary-text);
+
+    }
+
+    li:first-child a {
+      padding-top: 0;
+    }
+
+    .twitter__date {
+      padding-left: var(--offset);
+    }
+  }
+
+  &__bottom {
+    font-weight: 400;
+    margin-top: 9%;
+    padding: 0 var(--offset);
+
+  }
+}

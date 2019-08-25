@@ -1,0 +1,41 @@
+{
+  "name": "name",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "core-js": "^3.0.1н",
+    "gulp-changed": "^4.0.1",
+    "normalize.css": "^8.0.1",
+    "smart-grid": "^2.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "autoprefixer": "^9.6.0",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.5",
+    "del": "^4.1.1",
+    "eslint": "^6.0.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "slick-carousel": "^1.8.1",
+    "webpack": "^4.32.2",
+    "webpack-stream": "^5.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

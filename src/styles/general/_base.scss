@@ -1,0 +1,228 @@
+:root {
+  --color-primary-bg: 139, 72, 255; //#8b48ff;
+  --color-secondary-bg: 103, 61, 252; //#673dfc;
+  --color-primary-text: 255, 255, 255; //#fff;
+  --color-secondary-text: 000, 000, 000; //#000;
+  --color-tertiary-text: 199, 199, 199; //#c7c7c7;
+  
+  //--------COLOR-end-----
+
+  //----text-size----
+  --size-small-text: 1.4rem;
+
+  --size-primary-text: 1.5rem;
+  --size-secondary-text: 1.8rem;
+  --size-tertiary-text: 2.4rem;
+  --size-comment-text: 2.6rem;
+
+  --size-h1-text: 8.8rem;
+  --size-h2-text: 4.6rem;
+  --size-num-text: 6.3rem;
+
+  --size-logo-text: 3.4rem;
+
+  //----text-size-end---
+
+
+
+  //------margin----
+  --margin-primary-top: 14rem;
+  --margin-primary-bottom: 14rem;
+  //------margin-end-
+
+
+
+  //------offset-----
+  --offset: 1.5rem;
+  ///-----offset-end---
+
+
+
+  //////
+  --accept-color-primary-bg: rgba(var(--color-primary-bg) ,1); 
+  --accept-color-secondary-bg: rgba(var(--color-secondary-bg), 1);
+  --accept-color-primary-text: rgba(var(--color-primary-text),1);
+  --accept-color-secondary-text: rgba(var(--color-secondary-text),1);
+  --accept-color-tertiary-text: rgba(var(--color-tertiary-text),1);
+  //////
+
+
+
+
+  @media (max-width: 1200px) {
+    --margin-primary-top: 8rem;
+    --margin-primary-bottom: 9rem;
+
+
+    --size-small-text: 1.2rem;
+
+    --size-primary-text: 1.4rem;
+    --size-secondary-text: 1.6rem;
+    --size-tertiary-text: 2.0rem;
+    --size-comment-text: 2.2rem;
+  
+    --size-h1-text: 5.5rem;
+    --size-h2-text: 4rem;
+    --size-num-text: 4.8rem;
+  
+    --size-logo-text: 2.8rem;
+  }
+
+
+  @media screen and (max-width: 900px) {
+    --margin-primary-top: 6rem;
+    --margin-primary-bottom: 6rem;
+
+    --size-num-text: 2rem;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+
+  &::after,
+  &::before {
+    box-sizing: inherit;
+
+  }
+}
+
+html {
+  font-size: 62.5%;
+
+}
+
+body {
+  //max-width: 192rem;
+  min-width: 32rem;
+  background: var(--accept-color-primary-text);
+  line-height: 1.5;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  color: var(--accept-color-primary-text);
+  
+}
+
+
+.body-wrapper {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.header {
+  &__title {
+    font-size: 5vmax;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .box {
+    color: var(--accept-color-primary-text);
+
+    i {
+      font-size: 6rem;
+      margin-bottom: 3rem;
+
+    }
+
+    &__title {
+      font-size: var(--size-tertiary-text);
+    }
+
+    &__text,
+    &__item {
+      font-size: var(--size-primary-text);
+
+      i {
+        font-size: var(--size-primary-text);
+
+      }
+    }
+
+
+  }
+}
+
+.subtitle {
+  display: block;
+  font-size: var(--size-primary-text);
+  line-height: 2;
+  letter-spacing: 1.5px;
+  color: var(--accept-color-primary-text);
+  animation: moveInRight 1s 0.5s;
+  text-transform: uppercase;
+
+}
+
+.subtitle--secondary {
+  @extend .subtitle;
+  color: var(--accept-color-secondary-text);
+  margin-bottom: 2.5rem;
+}
+
+
+.title--secondary {
+  font-size: var(--size-h2-text);
+  color: var(--accept-color-secondary-text);
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 4.5rem;
+
+  // @media(max-width: 900px) {
+  //   font-size: 2.8rem;
+  //   margin-bottom: 2.2rem;
+  // }
+}
+
+.text {
+  font-size: var(--size-secondary-text);
+  color: var(--accept-color-secondary-text);
+  font-weight: 400;
+}
+
+.text--white {
+  @extend .text;
+  color: var(--accept-color-primary-text);
+}
+
+.comment--text {
+  font-size: var(--size-comment-text);
+  font-style: italic;
+}
+
+.stats__num {
+  font-size: var(--size-num-text);
+  @media (max-width:720px){
+    font-size: 2rem;
+  }
+
+  
+}
+
+.text--tertiary {
+  font-size: var(--size-tertiary-text);
+  color: var(--accept-color-secondary-text);
+  font-weight: 400;
+}
+
+
+.text--small {
+  color: var(--accept-color-tertiary-text);
+  font-size: var(--size-small-text);
+}
+
+.text--small-w {
+  @extend .text--small;
+  color: var(--accept-color-primary-text);
+  font-weight: 400;
+}
+
+.footer--title {
+  @extend .text--tertiary;
+  font-weight: 400;
+  color: var(--accept-color-primary-text);
+}
