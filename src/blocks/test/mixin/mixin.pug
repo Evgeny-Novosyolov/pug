@@ -1,0 +1,38 @@
+mixin menu2(prop)
+  ul(class="menu__list")
+    each item in prop
+      li.menu__item: a.menu__link(href=item.href class={active:currentURL === item.href}) #{item.title}
+
+
+
+mixin block2(items)
+  ul.menu__list
+    each item in items
+      li.menu__item: a.menu__link(href=item.src) #{item.title}
+
+
+
+mixin boxItem(event)
+  .box
+    h1 #{event.title}
+    ul.box__list
+      each itemText in event.text
+        li.box__item #{itemText}   
+
+
+mixin boxItem3(event)
+  each eventItem in event
+    .box
+      h1 #{eventItem.title}
+      ul.box__list
+        each itemText in eventItem.text
+          li.box__item #{itemText}   
+
+
+
+
+
+mixin list(...items)
+  ul 
+    each item in items
+      li= item

@@ -1,0 +1,26 @@
+include ../mixin/mixin.pug
+
+- let infoBox = [{"title":"Заглавный текст22", "text": ["text211", "text2222", "text223"]}]
+
+- let infoBox11 = [{"title":"Заглавный текст11", "text": ["text111", "text1112", "text113"]}]
+- let infoBox22 = [{"title":"Заглавный текст22", "text": ["text211", "text2222", "text223"]}]
+- let BLOCKINFO = [infoBox11, infoBox22]
+
+
+- let footer1 = ["text1", "text2", "text3"]
+- let footer2 = [1,2,3]
+- let footer = ["text1", "text2", "text3"]
+
+
+.block
+  .block__wrapper
+    +boxItem(...infoBox)
+  
++list(...footer2)
+
+
+//- +boxItem3(...BLOCKINFO)
+
+for item in BLOCKINFO
+  +boxItem3(item)
+

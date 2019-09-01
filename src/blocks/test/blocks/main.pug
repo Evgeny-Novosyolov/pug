@@ -1,0 +1,11 @@
+block ../config.pug
+include ../mixin/mixin.pug
+
+-var items = [1,2,3,4,5,6,8]
+
+
+.body-wrapper
+  header(class="header")
+    include ../includes/_header.pug
+  section.option
+    include ../includes/option.pug

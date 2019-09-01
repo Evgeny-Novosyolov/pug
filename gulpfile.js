@@ -15,7 +15,7 @@ const postcss = require('gulp-postcss');
 const pug = require('gulp-pug');
 const changed = require('gulp-changed');
 
-let watchPage = "lolo.html"
+let watchPage = "test.html"
 
 const cssFiles = [
   'src/styles/main.scss'

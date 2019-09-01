@@ -1,0 +1,9 @@
+include ../mixin/mixin.pug
+
+
+.header-wrapper
+  .logo-wrapper__img
+    img(src="", alt="")
+  nav.menu
+    - var menuList = [{"title": "text1", "src": "text1.com"}, {"title": "text2", "src" : "text2.com"}]
+    +block2(menuList)

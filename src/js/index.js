@@ -7,5 +7,3 @@
 // import "../blocks/stats/_stats";
 // import "../blocks/news/_news";
 // import "../blocks/footer/_footer";
-
-let a = 0
